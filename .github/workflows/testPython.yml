@@ -1,20 +1,30 @@
-name : Python CI
+name: Python CI
 
-on :
-workflow_dispatch :
-push: 
-  branches:
-    - main
 
-jobs: 
-  tests :
-    runs-on : ubuntu-latest
 
-    steps :
+on:
+
+  workflow_dispatch:
+
+  push:
+
+    branches:
+
+      - main
+
+
+
+jobs:
+
+  tests:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
       - uses: actions/checkout@v3
 
-      
-      - name: print folder
-      - run:  |
+      - name: Print folder
+
+        run: |
           ls
-          mkdir folder
